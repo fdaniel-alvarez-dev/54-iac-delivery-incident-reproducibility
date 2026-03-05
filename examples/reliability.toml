@@ -1,0 +1,22 @@
+[slo]
+availability_target = 0.999
+p95_latency_ms_target = 800
+error_rate_target = 0.01
+
+[alerts]
+pager = "oncall-ml"
+drift_alert = true
+hallucination_alert = true
+cost_anomaly_alert = true
+
+[mitigations]
+fallback_model_enabled = true
+tool_allowlist_enabled = true
+prompt_injection_filter_enabled = true
+output_safety_filter_enabled = true
+
+[runbooks]
+environment_drift = "docs/runbooks/01-environment-drift.md"
+safe_release = "docs/runbooks/02-safe-ml-release.md"
+ml_incident_response = "docs/runbooks/03-ml-incident-response.md"
+

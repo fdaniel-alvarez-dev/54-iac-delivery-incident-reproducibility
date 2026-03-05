@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+PYTHONPATH="${PYTHONPATH:-src}" exec python3 -m portfolio_proof "$@"
+

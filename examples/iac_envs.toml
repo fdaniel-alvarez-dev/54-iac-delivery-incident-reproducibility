@@ -1,0 +1,39 @@
+[env.dev]
+terraform_version = "1.6.6"
+kubernetes_version = "1.29"
+
+[env.dev.providers]
+aws = "5.41.0"
+kubernetes = "2.27.0"
+
+[env.dev.backend]
+type = "s3"
+encryption = true
+state_locking = true
+
+[env.staging]
+terraform_version = "1.6.6"
+kubernetes_version = "1.29"
+
+[env.staging.providers]
+aws = "5.41.0"
+kubernetes = "2.27.0"
+
+[env.staging.backend]
+type = "s3"
+encryption = true
+state_locking = true
+
+[env.prod]
+terraform_version = "1.6.6"
+kubernetes_version = "1.29"
+
+[env.prod.providers]
+aws = "5.41.0"
+kubernetes = "2.27.0"
+
+[env.prod.backend]
+type = "s3"
+encryption = true
+state_locking = true
+

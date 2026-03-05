@@ -1,0 +1,34 @@
+[pipeline]
+name = "semantic-search-rag"
+owner = "ml-platform"
+model_name = "rag-embedder"
+
+[artifacts]
+data_version = "2026-03-01"
+code_git_sha = "d34db33fd34db33fd34db33fd34db33fd34db33f"
+training_config_hash = "sha256:0e7f19d19c09d7c77b8de1bcb8d3b25b5aa7c2f73df0c4fe5f6a5cde2f7d1a21"
+model_checksum = ""
+container_image = "ghcr.io/example/semantic-search-rag"
+container_image_digest = ""
+rag_index_version = "v12"
+
+[quality_gates]
+unit_tests = true
+integration_tests = false
+offline_evaluation = false
+security_scan_required = false
+drift_monitoring_required = false
+hallucination_mitigation_required = false
+
+[release]
+environment = "prod"
+requires_approval = false
+strategy = "all-at-once"
+canary_percent = 100
+auto_rollback = false
+max_error_rate = 0.01
+max_p95_latency_ms = 800
+
+[registry]
+type = "mock"
+path = "../mock_registry.json"
